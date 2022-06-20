@@ -1,0 +1,777 @@
+Resources:
+# put resource name relateble to dynamo db tableDynamoDBphonebookTable:
+  DynamoDBphonebookTable:
+    Type: AWS::DynamoDB::Table
+    Description: phonebook table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "phonebook"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBposorderTable:
+    Type: AWS::DynamoDB::Table
+    Description: pos_order
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+       
+      #put table name
+      TableName: "pos_order"
+      BillingMode: PAY_PER_REQUEST 
+  DynamoDBproduccatTable:
+    Type: AWS::DynamoDB::Table
+    Description: product_cat_seo_tag table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "product_cat_Seo_tag"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBpeoductrelatedproductTable:
+    Type: AWS::DynamoDB::Table
+    Description: product_related_product table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      
+
+      #put table name
+      TableName: "product_related_product"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBproductreviewsTable:
+    Type: AWS::DynamoDB::Table
+    Description: product_reviews
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+        #put table name
+      TableName: "product_reviews"
+      BillingMode: PAY_PER_REQUEST 
+  DynamoDBproductTable:
+    Type: AWS::DynamoDB::Table
+    Description: products table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "products"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBrelatedbusinessesTable:
+    Type: AWS::DynamoDB::Table
+    Description: related_businesses table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      
+
+      #put table name
+      TableName: "related_businesses"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBrelateddomainTable:
+    Type: AWS::DynamoDB::Table
+    Description: related_domain table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "related_domain"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBroleTable:
+    Type: AWS::DynamoDB::Table
+    Description: role table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "role"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBroleservicesnewTable:
+    Type: AWS::DynamoDB::Table
+    Description: role_Services_new table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+
+      #put table name
+      TableName: "role_services_new"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBsellerTable:
+    Type: AWS::DynamoDB::Table
+    Description: seller table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "seller"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBaellerorderTable:
+    Type: AWS::DynamoDB::Table
+    Description: seller_order table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      
+
+      #put table name
+      TableName: "seller_order"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBsellerprofilesnapshotTable:
+    Type: AWS::DynamoDB::Table
+    Description: seller_profile_snapshot table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      
+
+      #put table name
+      TableName: "seller_profile_snapshot"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBsellerstoryTable:
+    Type: AWS::DynamoDB::Table
+    Description: sellerstory table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "sellerstory"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBseotagTable:
+    Type: AWS::DynamoDB::Table
+    Description: seo_tag table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "seo_tag"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBsellercodedomainvalueTable:
+    Type: AWS::DynamoDB::Table
+    Description: service_code_doamin_value table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "service_code_domain_value"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBserviceroleTable:
+    Type: AWS::DynamoDB::Table
+    Description: service_role table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "service_role"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBservicescreenfieldsTable:
+    Type: AWS::DynamoDB::Table
+    Description: service_screen_fields table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "service_screen_fields"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBservicesTable:
+    Type: AWS::DynamoDB::Table
+    Description: services table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "services"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBstripecustomersTable:
+    Type: AWS::DynamoDB::Table
+    Description: stripe_customer table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "stripe_customer"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBsubscriptionplanTable:
+    Type: AWS::DynamoDB::Table
+    Description: subscriptionplan table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "subscriptionplan"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBsystemlocalizationvalueTable:
+    Type: AWS::DynamoDB::Table
+    Description: system_localization_value table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "system_localization_value"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBtargetbuyerindustryTable:
+    Type: AWS::DynamoDB::Table
+    Description: target_buyer_industry table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "target_buyer_industry"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBtaxTable:
+    Type: AWS::DynamoDB::Table
+    Description: tax table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "tax"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBurlTable:
+    Type: AWS::DynamoDB::Table
+    Description: url table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "url"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBuserserviceassignmentTable:
+    Type: AWS::DynamoDB::Table
+    Description: userServiceAssignment table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "userServiceAssignment"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBusercollectionTable:
+    Type: AWS::DynamoDB::Table
+    Description: user_collection table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "user_collection"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBusercollectionproductTable:
+    Type: AWS::DynamoDB::Table
+    Description: user_collection_product table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "user_collection_product"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBusermediadownloadTable:
+    Type: AWS::DynamoDB::Table
+    Description: user_media_downloads table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "user_media_downloads"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBusermeetingtTable:
+    Type: AWS::DynamoDB::Table
+    Description: user_meeting table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "user_meeting"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBuserroleTable:
+    Type: AWS::DynamoDB::Table
+    Description: user_role table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "user_role"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBuserservicescreenfieldsTable:
+    Type: AWS::DynamoDB::Table
+    Description: user_service_screen_fields table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "user_service_screen_fields"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBusersessionTable:
+    Type: AWS::DynamoDB::Table
+    Description: user_session table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "user_session"
+      BillingMode: PAY_PER_REQUEST
+
+  DynamoDBuserupdateHistoryTable:
+    Type: AWS::DynamoDB::Table
+    Description: userupdateHistory table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        -
+          AttributeName: "updatedAt"
+          AttributeType: "S"
+
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "updatedAt"
+          KeyType: "RANGE"
+
+      #put table name
+      TableName: "userupdateHistory"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBusersTable:
+    Type: AWS::DynamoDB::Table
+    Description: users table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "users"
+      BillingMode: PAY_PER_REQUEST
+  DynamoDBuserTable:
+    Type: AWS::DynamoDB::Table
+    Description: user table
+    Properties:
+      AttributeDefinitions: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          AttributeType: "S"
+        
+      KeySchema: 
+        - 
+        # put partition key
+          AttributeName: "_id"
+          KeyType: "HASH"
+      #put table name
+      TableName: "user"
+      BillingMode: PAY_PER_REQUEST
